@@ -181,9 +181,9 @@ const projects = [
     source_code_link: "https://github.com/likelion-syu/syufesta",
   },
   {
-    name: "MasterPiece",
+    name: "Masterpiece",
     description:
-      "MasterPiece는 신진작가나 아마추어 또한 적은 비용으로 작품을 선보일 수 있는 자리를 마련하고자 시작되었습니다. 메타버스를 접목하여서 사용자들에게는 새로운 경험을 줌과 동시에 시장의 불균형을 해소 시킬 수 있을 거라고 예상하였습니다. React-Native 개발을 하면서 Nodejs서버와 통신하였습니다.",
+      "Masterpiece는 신진작가나 아마추어 또한 적은 비용으로 작품을 선보일 수 있는 자리를 마련하고자 시작되었습니다. 메타버스를 접목하여서 사용자들에게는 새로운 경험을 줌과 동시에 시장의 불균형을 해소 시킬 수 있을 거라고 예상하였습니다. React-Native 개발을 하면서 Nodejs서버와 통신하였습니다.",
     tags: [
       {
         name: "react-native",
@@ -199,7 +199,7 @@ const projects = [
       },
     ],
     image: "/assets/masterpiece.png",
-    source_code_link: "https://www.syu.ac.kr/blog/%EC%82%BC%EC%9C%A1%E4%BA%BA-%ED%95%99%EC%83%9D-%EC%8A%A4%ED%83%80%ED%8A%B8%EC%97%85-%EB%A7%88%EC%8A%A4%ED%84%B0%ED%94%BC%EC%8A%A4-%EC%A0%95%EB%B6%80%EC%A7%80%EC%9B%90-%EC%B0%BD%EC%97%85%EB%B9%84-4/",
+    source_code_link: "https://github.com/gihong-park/masterpiece",
   },
   {
     name: "HaFFn",
