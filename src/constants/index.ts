@@ -116,8 +116,8 @@ const experiences = [
   {
     title: "올드루키",
     company_name: "OLD ROOKIE",
-    icon: "/assets/group/oldrookie.png",
-    iconBg: "#000",
+    icon: "/assets/group/oldrookie_crop.png",
+    iconBg: "#191919",
     date: "Mar 2021 - Feb 2022",
     points: [
       "메타버스를 통한 혁신을 꿈꾸는 IT 스타트업",
