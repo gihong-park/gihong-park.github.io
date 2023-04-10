@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 import "react-vertical-timeline-component/style.min.css";
 
-import { styles } from "../styles/styles";
+import { styles } from "../styles";
 import { experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
@@ -24,11 +24,12 @@ const ExperienceCard = ({ experience }:any) => {
       iconStyle={{ background: experience.iconBg }}
       icon={
         <div className='flex justify-center items-center w-full h-full'>
-          <img
+          {experience.icon && <img
             src={experience.icon}
             alt={experience.company_name}
             className='w-[60%] h-[60%] object-contain'
-          />
+          />}
+          {experience.icon == "" && <p>{experience.company_name}</p>}
         </div>
       }
     >
@@ -61,10 +62,10 @@ const Experience = () => {
     <>
       <motion.div variants={textVariant(0)}>
         <p className={`${styles.sectionSubText} text-center`}>
-          What I have done so far
+          지금까지의
         </p>
         <h2 className={`${styles.sectionHeadText} text-center`}>
-          Work Experience.
+          경험
         </h2>
       </motion.div>
 

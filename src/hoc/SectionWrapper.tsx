@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Component, ReactNode } from "react";
 
-import { styles } from "src/styles/styles";
+import { styles } from "src/styles";
 import { staggerContainer } from "src/utils/motion";
 import { JsxElement } from "typescript";
 

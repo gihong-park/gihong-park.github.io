@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 
-import { styles } from "../styles/styles";
+import { styles } from "../styles";
 import { navLinks } from "../constants";
-import { logo, menu, close } from "../assets";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -42,10 +41,10 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logo} alt='logo' className='w-9 h-9 object-contain' />
+          <img src={"https://miro.medium.com/v2/resize:fill:64:64/1*iYyKxPQ4r2l6Yd5aZU8b-w.jpeg"} alt='logo' className='w-9 h-9 object-contain' />
           <p className='text-white text-[18px] font-bold cursor-pointer flex '>
-            Adrian &nbsp;
-            <span className='sm:block hidden'> | JavaScript Mastery</span>
+            Gihong Park &nbsp;
+            <span className='sm:block hidden'> | Freelancer</span>
           </p>
         </Link>
 
@@ -65,7 +64,7 @@ const Navbar = () => {
 
         <div className='sm:hidden flex flex-1 justify-end items-center'>
           <img
-            src={toggle ? close : menu}
+            src={toggle ? "/assets/close.svg" : "/assets/menu.svg"}
             alt='menu'
             className='w-[28px] h-[28px] object-contain'
             onClick={() => setToggle(!toggle)}
