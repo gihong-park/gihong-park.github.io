@@ -116,7 +116,7 @@ const experiences = [
   {
     title: "올드루키",
     company_name: "OLD ROOKIE",
-    icon: "",
+    icon: "/assets/group/oldrookie.png",
     iconBg: "#000",
     date: "Mar 2021 - Feb 2022",
     points: [
