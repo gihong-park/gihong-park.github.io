@@ -1,11 +1,11 @@
 import React, { ReactNode } from "react";
-import { Tilt } from "./Tilt";
 import { motion } from "framer-motion";
+import Tilt from "react-parallax-tilt";
 
-import { styles } from "../styles";
 import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
+import { styles } from "src/styles";
 
 const ServiceCard = ({ index, title, icon }: any) => (
   <Tilt className='xs:w-[250px] w-full'>
@@ -34,13 +34,13 @@ const About = () => {
   return (
     <>
       <motion.div variants={textVariant(0)}>
-        <p className="sm:text-[18px] text-[14px] text-secondary uppercase tracking-wider">Introduction</p>
-        <h2 className="text-white font-black text-[30px] md:text-[60px] sm:text-[50px] xs:text-[40px]">Overview.</h2>
+        <p className={styles.sectionSubText}>Introduction</p>
+        <h2 className={styles.sectionHeadText}>Overview.</h2>
       </motion.div>
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
+        className='mt-4 text-secondary text-[18px] max-w-3xl leading-[30px]'
       >
           &nbsp;저는 창업을 계기로 개발을 공부하기 시작하여서 현재는 프론트 엔드 분야에서 Dart, Typescript, JavaScript,
           그리고 React, Nextjs, Flutter와 같은 프레임워크를 다룰줄 알며 Babylonjs, Threejs와 같은 3D 기반 기술을
