@@ -1,11 +1,11 @@
-import React, { ChangeEvent, FormEvent, useRef, useState } from "react";
+import React, { ChangeEvent, FormEvent, useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import emailjs from "@emailjs/browser";
 
 import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
+import axios from "axios";
 
 const Contact = () => {
   const formRef = useRef<HTMLFormElement>(null);
@@ -31,37 +31,25 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
 
-    emailjs
-      .send(
-        process.env.EMAILJS_SERVICE_ID!,
-        process.env.EMAILJS_TEMPLATE_ID!,
-        {
-          from_name: form.name,
-          to_name: "JavaScript Mastery",
-          from_email: form.email,
-          to_email: "sujata@jsmastery.pro",
-          message: form.message,
-        },
-        process.env.EMAILJS_PUBLIC_KEY!
-      )
-      .then(
-        () => {
-          setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
-
-          setForm({
-            name: "",
-            email: "",
-            message: "",
-          });
-        },
-        (error) => {
-          setLoading(false);
-          console.error(error);
-
-          alert("Ahh, something went wrong. Please try again.");
-        }
-      );
+    axios.post('https://portfolio.starberry.click/api/v1/contact', {
+      name: form.name,
+      email: form.email, 
+      message: form.message,
+    })
+    .then(function (response) {
+      setLoading(false);
+      alert("감사합니다. 연락드리겠습니다.")
+      setForm({
+        name: "",
+        email: "",
+        message: "",
+      });
+    })
+    .catch(function (error) {
+      setLoading(false);
+      console.error(error);
+      alert("뭔가가.... 잘못되었습니다. 다시 시도해보세요.")
+    });
   };
 
   return (
